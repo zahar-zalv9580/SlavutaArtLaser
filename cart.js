@@ -1,9 +1,10 @@
 // Отримуємо кошик з localStorage
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-// Виводимо товари
 const cartItemsDiv = document.querySelector('.cart-items');
 const totalPriceEl = document.getElementById('total-price');
+const clearBtn = document.getElementById('clear-cart-btn');
+const checkoutBtn = document.getElementById('checkout-btn');
 
 function renderCart() {
   cartItemsDiv.innerHTML = '';
@@ -21,13 +22,11 @@ function renderCart() {
     const cartItem = document.createElement('div');
     cartItem.classList.add('cart-item');
     cartItem.innerHTML = `
-      <img src="${item.img}" alt="${item.name}">
+      <img src="${item.img || 'placeholder.jpg'}" alt="${item.name}">
       <h3>${item.name}</h3>
       <p class="price">${item.price} грн</p>
-      <div>
-        <input type="number" value="${item.qty}" min="1" data-index="${index}">
-        <button class="remove" data-index="${index}">×</button>
-      </div>
+      <input type="number" value="${item.qty}" min="1" data-index="${index}">
+      <button class="remove" data-index="${index}">×</button>
     `;
     cartItemsDiv.appendChild(cartItem);
   });
@@ -37,7 +36,7 @@ function renderCart() {
 
 renderCart();
 
-// Обробка видалення і зміни кількості
+// Видалення товарів
 cartItemsDiv.addEventListener('click', e => {
   if (e.target.classList.contains('remove')) {
     const index = e.target.dataset.index;
@@ -47,6 +46,7 @@ cartItemsDiv.addEventListener('click', e => {
   }
 });
 
+// Зміна кількості товарів
 cartItemsDiv.addEventListener('input', e => {
   if (e.target.type === 'number') {
     const index = e.target.dataset.index;
@@ -54,4 +54,23 @@ cartItemsDiv.addEventListener('input', e => {
     localStorage.setItem('cart', JSON.stringify(cart));
     renderCart();
   }
+});
+
+// Очистити кошик
+clearBtn.addEventListener('click', () => {
+  cart = [];
+  localStorage.setItem('cart', JSON.stringify(cart));
+  renderCart();
+});
+
+// Оформити замовлення (поки просто alert)
+checkoutBtn.addEventListener('click', () => {
+  if (cart.length === 0) {
+    alert('Ваш кошик порожній!');
+    return;
+  }
+  alert('Дякуємо за замовлення! З вами зв’яжеться менеджер.');
+  cart = [];
+  localStorage.setItem('cart', JSON.stringify(cart));
+  renderCart();
 });

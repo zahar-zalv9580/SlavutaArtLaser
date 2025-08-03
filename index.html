@@ -3,140 +3,149 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Slavuta ArtLaser</title>
-  <link rel="stylesheet" href = "style.css">
-  </head>
-  <body>
-    <header>
+  <title>Slavuta ArtLaser</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
     <nav>
-    <div class="logo">logo</div>
-    <div class="nav-links">
-      <a href="index.html">Головна</a>
-      <a href="products.html">Вироби</a>
-      <a href="shopcart.html">Кошик</a>
-    </div>
-  </nav>
+      <div class="logo">Slavuta ArtLaser</div>
+      <div class="nav-links">
+        <a href="index.html">Головна</a>
+        <a href="products.html">Вироби</a>
+        <a href="shopcart.html">Кошик</a>
+      </div>
+    </nav>
+    
+    <!-- Пошук -->
+    <form id="search-form">
+      <input type="text" id="search-input" placeholder="Пошук товарів...">
+      <button type="submit">🔍</button>
+      <div id="suggestions" class="hidden"></div>
+    </form>
   </header>
 
   <main>
+    <!-- Слайдер -->
     <section class="hero-slider">
-  <div class="slides">
-    <div class="slide active" style="background-image: url('banner1.jpg');">
-      <div class="slide-content">
-        <h1>Домашня робота з дерева (і не тільки!) для вашого дому</h1>
-        <p>Унікальні декор і подарунки, які створюють затишок.</p>
-        <a href="products.html" class="btn-primary">Переглянути</a>
+      <div class="slides">
+        <div class="slide active" style="background-image: url('banner1.jpg');">
+          <div class="slide-content">
+            <h1>Домашня робота з дерева (і не тільки!) для вашого дому</h1>
+            <p>Унікальні декор і подарунки, які створюють затишок.</p>
+            <a href="products.html" class="btn-primary">Переглянути</a>
+          </div>
+        </div>
+
+        <div class="slide" style="background-image: url('banner2.jpg');">
+          <div class="slide-content">
+            <h1>Екологічно чисті матеріали</h1>
+            <p>Ми працюємо тільки з натуральними продукціями та екологічними покриттями.</p>
+            <a href="products.html" class="btn-primary">Дивитись каталог</a>
+          </div>
+        </div>
+
+        <div class="slide" style="background-image: url('banner3.jpg');">
+          <div class="slide-content">
+            <h1>Індивідуальні замовлення під ваш дизайн</h1>
+            <p>Ви кажете нам виріб та стиль - ми робимо!</p>
+            <a href="products.html" class="btn-primary">Замовити зараз</a>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <div class="slide" style="background-image: url('banner2.jpg');">
-      <div class="slide-content">
-        <h1>Екологічно чисті матеріали</h1>
-        <p>Ми працюємо тільки з натуральними продукціями та екологічними покриттями.</p>
-        <a href="products.html" class="btn-primary">Дивитись каталог</a>
-      </div>
-    </div>
+      <!-- Кнопки навігації -->
+      <button class="prev">‹</button>
+      <button class="next">›</button>
 
-    <div class="slide" style="background-image: url('banner3.jpg');">
-      <div class="slide-content">
-        <h1>Індивідуальні замовлення під ваш дизайн</h1>
-        <p>Ви кажете нам виріб та стиль - ми робимо!</p>
-        <a href="products.html" class="btn-primary">Замовити зараз</a>
-      </div>
-    </div>
-  </div>
+      <!-- Індикатори -->
+      <div class="indicators"></div>
+    </section>
 
-  <!-- Кнопки навігації -->
-  <button class="prev">‹-</button>
-  <button class="next">-›</button>
-
-  <!-- Індикатори -->
-  <div class="indicators"></div>
-</section>
-
+    <!-- Переваги -->
     <section class="advantages">
-  <h2>Чому обирають нас?</h2>
-  <div class="advantages-grid">
-    <div class="advantage-item">
-      <img src="placeholder.jpg" alt="Доставка">
-      <h3>Натуральні матеріали</h3>
-      <p>Усі вироби виготовляються лише з екологічної деревини та матеріалів без шкідливих покриттів.</p>
-    </div>
+      <h2>Чому обирають нас?</h2>
+      <div class="advantages-grid">
+        <div class="advantage-item">
+          <img src="placeholder.jpg" alt="Доставка">
+          <h3>Натуральні матеріали</h3>
+          <p>Усі вироби виготовляються лише з екологічної деревини та матеріалів без шкідливих покриттів.</p>
+        </div>
 
-    <div class="advantage-item">
-      <img src="placeholder.jpg" alt="Повернення">
-      <h3>Швидке виготовлення</h3>
-      <p>Виготовимо замовлення за 1-2 дні, щоб ваш виріб швидко потрапив у ваш дім.</p>
-    </div>
+        <div class="advantage-item">
+          <img src="placeholder.jpg" alt="Повернення">
+          <h3>Швидке виготовлення</h3>
+          <p>Виготовимо замовлення за 1-2 дні, щоб ваш виріб швидко потрапив у ваш дім.</p>
+        </div>
 
-    <div class="advantage-item">
-      <img src="placeholder.jpg" alt="Підтримка">
-      <h3>Унікальний дизайн</h3>
-      <p>Кожна річ – це маленький арт-об’єкт. Ви не знайдете двох однакових виробів.</p>
-    </div>
+        <div class="advantage-item">
+          <img src="placeholder.jpg" alt="Підтримка">
+          <h3>Унікальний дизайн</h3>
+          <p>Кожна річ – це маленький арт-об’єкт. Ви не знайдете двох однакових виробів.</p>
+        </div>
 
-    <div class="advantage-item">
-      <img src="placeholder.jpg" alt="Оригінальні товари">
-      <h3>З любов'ю до деталей</h3>
-      <p>Все деталізовано - навіть на найменших виробах!</p>
-    </div>
-  </div>
-</section>
+        <div class="advantage-item">
+          <img src="placeholder.jpg" alt="Оригінальні товари">
+          <h3>З любов'ю до деталей</h3>
+          <p>Все деталізовано - навіть на найменших виробах!</p>
+        </div>
+      </div>
+    </section>
 
+    <!-- Відгуки -->
+    <section class="reviews">
+      <h2>Відгуки наших покупців</h2>
+      <div class="reviews-grid">
+        <div class="review-item">
+          <img src="placeholder.jpg" alt="Аватар" class="avatar">
+          <h3>Дід П.</h3>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p>Замовляв підставку під каву - ідеально за гаражами!</p>
+        </div>
 
-<section class="reviews">
-  <h2>Відгуки наших покупців</h2>
-  <div class="reviews-grid">
-    <div class="review-item">
-      <img src="placeholder.jpg" alt="Аватар" class="avatar">
-      <h3>Дід П.</h3>
-      <div class="rating">⭐⭐⭐⭐⭐</div>
-      <p>Замовляв підставку під каву - ідеально за гаражами!</p>
-    </div>
+        <div class="review-item">
+          <img src="placeholder.jpg" alt="Аватар" class="avatar">
+          <h3>Байден Б.</h3>
+          <div class="rating">⭐⭐⭐⭐</div>
+          <p>Доставка швидка, ціни адекватні.</p>
+        </div>
 
-    <div class="review-item">
-      <img src="placeholder.jpg" alt="Аватар" class="avatar">
-      <h3>Байден Б.</h3>
-      <div class="rating">⭐⭐⭐⭐</div>
-      <p>Доставка швидка, ціни адекватні.</p>
-    </div>
-
-    <div class="review-item">
-      <img src="placeholder1.jpg" alt="Аватар" class="avatar">
-      <h3>Петро Порошенко О.</h3>
-      <div class="rating">⭐⭐⭐⭐⭐</div>
-      <p>Круті вироби, ідеально для фабрики шоколаду. 5 із 5</p>
-    </div>
-  </div>
-</section>
-
-
+        <div class="review-item">
+          <img src="placeholder1.jpg" alt="Аватар" class="avatar">
+          <h3>Петро Порошенко О.</h3>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p>Круті вироби, ідеально для фабрики шоколаду. 5 із 5</p>
+        </div>
+      </div>
+    </section>
   </main>
 
+  <!-- Footer -->
   <footer class="footer">
-  <div class="footer-container">
-    <div class="footer-col">
-      <h3>Про нас</h3>
-      <p>Ми створюємо унікальні дрібні вироби з натуральної деревини, які додають затишку та тепла будь-якому дому. Кожна річ – це ручна робота з душею та повагою до природи.</p>
-    </div>
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>Про нас</h3>
+        <p>Ми створюємо унікальні дрібні вироби з натуральної деревини, які додають затишку та тепла будь-якому дому. Кожна річ – це ручна робота з душею та повагою до природи.</p>
+      </div>
 
-
-    <div class="footer-col">
-      <h3>Контакти</h3>
-      <p>📞 +38 (097) 123-45-67</p>
-      <p>📧 info@shop.com</p>
-      <div class="social">
-        <a href="#">🔵 Facebook</a>
-        <a href="#">🟣 Instagram</a>
-        <a href="#">🔗 Telegram</a>
+      <div class="footer-col">
+        <h3>Контакти</h3>
+        <p>📞 +38 (097) 123-45-67</p>
+        <p>📧 info@shop.com</p>
+        <div class="social">
+          <a href="#">🔵 Facebook</a>
+          <a href="#">🟣 Instagram</a>
+          <a href="#">🔗 Telegram</a>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="footer-bottom">
-    © 2025 Slavuta ArtLaser. Усі права захищені.
-  </div>
-</footer>
-  </body>
-    <script src="script.js"></script>
+    <div class="footer-bottom">
+      © 2025 Slavuta ArtLaser. Усі права захищені.
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
 </html>

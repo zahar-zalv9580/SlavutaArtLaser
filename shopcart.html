@@ -1,24 +1,24 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Slavuta ArtLaser</title>
-  <link rel="stylesheet" href = "cart.css">
-  </head>
-  <body>
-    <header>
-    <nav>
-    <div class="logo">logo</div>
-    <div class="nav-links">
+  <title>Slavuta ArtLaser - Кошик</title>
+  <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+<header class="header">
+  <div class="container header-flex">
+    <a href="index.html" class="logo">Slavuta ArtLaser</a>
+    <nav class="nav">
       <a href="index.html">Головна</a>
       <a href="products.html">Вироби</a>
-      <a href="shopcart.html">Кошик</a>
-    </div>
-  </nav>
-  </header>
-  
-  <main class="cart-page container">
+      <a href="shopcart.html" class="active">Кошик</a>
+    </nav>
+  </div>
+</header>
+
+<main class="cart-page container">
   <h1>Ваш кошик</h1>
   
   <div class="cart-items">
@@ -28,16 +28,16 @@
   <div class="cart-summary">
     <p>Разом: <span id="total-price">0 грн</span></p>
     <button id="checkout-btn">Оформити замовлення</button>
+    <button id="clear-cart-btn" class="clear-btn">Очистити кошик</button>
   </div>
 </main>
   
-  <footer class="footer">
+<footer class="footer">
   <div class="footer-container">
     <div class="footer-col">
       <h3>Про нас</h3>
-      <p>Ми створюємо унікальні дрібні вироби з натуральної деревини, які додають затишку та тепла будь-якому дому. Кожна річ – це ручна робота з душею та повагою до природи.</p>
+      <p>Ми створюємо унікальні дрібні вироби з натуральної деревини, які додають затишку та тепла будь-якому дому.</p>
     </div>
-
 
     <div class="footer-col">
       <h3>Контакти</h3>
@@ -55,6 +55,7 @@
     © 2025 Slavuta ArtLaser. Усі права захищені.
   </div>
 </footer>
-  </body>
-    <script src="cart.js"></script>
+
+<script src="cart.js"></script>
+</body>
 </html>

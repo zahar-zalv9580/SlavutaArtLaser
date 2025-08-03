@@ -27,6 +27,7 @@ thumbs.forEach((thumb, i) => {
   thumb.addEventListener('click', () => showSlide(i));
 });
 
+// Додавання в кошик
 const buyBtn = document.querySelector('.btn-buy');
 
 buyBtn.addEventListener('click', () => {
@@ -38,8 +39,15 @@ buyBtn.addEventListener('click', () => {
   };
 
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
-  cart.push(product);
-  localStorage.setItem('cart', JSON.stringify(cart));
 
-  window.location.href = 'shopcart.html'; // Переходимо в кошик
+  // Якщо товар вже є в кошику – збільшити кількість
+  const existingIndex = cart.findIndex(item => item.name === product.name);
+  if (existingIndex >= 0) {
+    cart[existingIndex].qty++;
+  } else {
+    cart.push(product);
+  }
+
+  localStorage.setItem('cart', JSON.stringify(cart));
+  window.location.href = 'shopcart.html';
 });
