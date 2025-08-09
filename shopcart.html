@@ -12,42 +12,45 @@
       <a href="index.html">Головна</a>
       <a href="products.html">Вироби</a>
       <a href="shopcart.html">Кошик</a>
-      <a href="login.html" id="loginLink">Вхід</a>
     </nav>
   </header>
-
-  <main class="cart-page container">
-    <h1>Ваш кошик</h1>
-    <div class="cart-items"></div>
-
-    <div class="cart-summary">
-      <p>Разом: <span id="total-price">0 грн</span></p>
-      <button id="checkout-btn">Оформити замовлення</button>
-      <button id="clear-cart-btn" class="clear-btn">Очистити кошик</button>
-    </div>
-  </main>
+<main class="cart-page container">
+  <h1>Ваш кошик</h1>
   
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-col">
-        <h3>Про нас</h3>
-        <p>Ми створюємо унікальні дрібні вироби з натуральної деревини, які додають затишку та тепла будь-якому дому.</p>
-      </div>
-      <div class="footer-col">
-        <h3>Контакти</h3>
-        <p>📞 +38 (097) 123-45-67</p>
-        <p>📧 info@shop.com</p>
-        <div class="social">
-          <a href="#">🔵 Facebook</a>
-          <a href="#">🟣 Instagram</a>
-          <a href="#">🔗 Telegram</a>
-        </div>
+  <div class="cart-items">
+    <!-- Товари будуть згенеровані JS -->
+  </div>
+
+  <div class="cart-summary">
+    <p>Разом: <span id="total-price">0 грн</span></p>
+    <button id="checkout-btn">Оформити замовлення</button>
+    <button id="clear-cart-btn" class="clear-btn">Очистити кошик</button>
+  </div>
+</main>
+  
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-col">
+      <h3>Про нас</h3>
+      <p>Ми створюємо унікальні дрібні вироби з натуральної деревини, які додають затишку та тепла будь-якому дому.</p>
+    </div>
+
+    <div class="footer-col">
+      <h3>Контакти</h3>
+      <p>📞 +38 (097) 123-45-67</p>
+      <p>📧 info@shop.com</p>
+      <div class="social">
+        <a href="#">🔵 Facebook</a>
+        <a href="#">🟣 Instagram</a>
+        <a href="#">🔗 Telegram</a>
       </div>
     </div>
-    <div class="footer-bottom">
-      © 2025 Slavuta ArtLaser. Усі права захищені.
-    </div>
-  </footer>
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 Slavuta ArtLaser. Усі права захищені.
+  </div>
+</footer>
 
 <script src="cart.js"></script>
 </body>

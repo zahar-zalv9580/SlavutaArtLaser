@@ -38,9 +38,11 @@ document.querySelectorAll('.add-to-cart').forEach(btn => {
 
 const productsMeta = [
   { name: "Ключниця Family", category: "ключниці", price: 420, img: "product1-1.jpg", id: "1" },
-  { name: "Ключниця Haus", category: "ключниці", price: 420, img: "product2-1.jpg", id: "2" },
+  { name: "Ключниця Haus", category: "ключниці", price: 450, img: "product2-1.jpg", id: "2" },
   { name: "Брелок Україна", category: "брелки", price: 120, img: "product3-1.jpg", id: "3" },
-  { name: "Скринька На мрію", category: "інше", price: 500, img: "product4-1.jpg", id: "4" }
+  { name: "Скринька На мрію", category: "інше", price: 500, img: "product4-1.jpg", id: "4" },
+  { name: "Підставка на телефон", category: "інше", price: 100, img: "product5-1.jpg", id: "5" },
+  { name: "Скринька 'Спеції'", category: "інше", price: 150, img: "product6-1.jpg", id: "6" }
 ];
 
 /* --------------------

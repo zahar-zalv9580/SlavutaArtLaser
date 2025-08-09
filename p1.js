@@ -1,4 +1,3 @@
-// p1.js (повний — слайдер + обробник "Купити")
 const slides = document.querySelectorAll('.product-slider .slides img');
 const thumbs = document.querySelectorAll('.product-slider .thumbnails img');
 const prevBtn = document.querySelector('.product-slider .prev');
@@ -28,15 +27,14 @@ thumbs.forEach((thumb, i) => {
   thumb.addEventListener('click', () => showSlide(i));
 });
 
-// Додавання в кошик з синхронізацією на сервер, якщо користувач залогінений
+// Додавання в кошик
 const buyBtn = document.querySelector('.btn-buy');
 
-buyBtn.addEventListener('click', async () => {
-  const priceText = document.querySelector('.price').textContent || '';
+buyBtn.addEventListener('click', () => {
   const product = {
-    name: document.querySelector('.product-info h1').textContent.trim(),
-    price: parseInt(priceText.replace(/\D/g, ''), 10) || 0,
-    img: document.querySelector('.product-slider .slides img.active').getAttribute('src'),
+    name: document.querySelector('.product-info h1').textContent,
+    price: parseInt(document.querySelector('.price').textContent),
+    img: document.querySelector('.product-slider .slides img.active').src,
     qty: 1
   };
 
@@ -51,25 +49,5 @@ buyBtn.addEventListener('click', async () => {
   }
 
   localStorage.setItem('cart', JSON.stringify(cart));
-
-  // Якщо користувач залогінений — надсилаємо на сервер
-  const token = localStorage.getItem('token');
-  if (token) {
-    try {
-      await fetch('/api/cart/add', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`
-        },
-        body: JSON.stringify(product)
-      });
-      // необов'язково чекати на відповідь — але можна обробити помилки
-    } catch (err) {
-      console.warn('Не вдалось надіслати на сервер:', err);
-    }
-  }
-
-  // Перехід в кошик
   window.location.href = 'shopcart.html';
 });
