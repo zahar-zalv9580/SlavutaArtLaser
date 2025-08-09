@@ -149,3 +149,37 @@
   margin-bottom: 5px;
   color: #444;
 }
+
+.review-actions .like-btn {
+  background: transparent;
+  border: 1px solid #ddd;
+  padding: 6px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.review-actions .like-btn:hover { background: #fff1f1; }
+
+.reply-list {
+  margin-top: 8px;
+  display: grid;
+  gap: 8px;
+}
+
+.reply-item {
+  background: #fff;
+  padding: 8px;
+  border-radius: 6px;
+  border-left: 3px solid #eee;
+}
+
+.reply-meta { font-size: 13px; color: #666; margin-bottom: 4px; }
+.reply-text { font-size: 14px; color: #333; }
+
+/* reply form small */
+.reply-form input,
+.reply-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
