@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Slavuta ArtLaser - Ключниця Family</title>
   <link rel="stylesheet" href="p1.css">
+  <link rel="stylesheet" href="reviews.css">
 </head>
 <body>
   <!-- Хедер -->
@@ -21,7 +22,7 @@
 
   <!-- Контент товару -->
   <main>
-    <section class="product-page">
+    <section class="product-page" data-product-id="1">
       <div class="product-container">
         <!-- Слайдер фото -->
         <div class="product-slider">
@@ -44,7 +45,7 @@
         <!-- Опис товару -->
         <div class="product-info">
           <h1>Ключниця дерев'яна "Family"</h1>
-          <p class="price">450 грн</p>
+          <p class="price">420 грн</p>
           <p class="short-desc">
             Затишна дерев'яна ключниця у формі будиночка з декоративним деревом. Ідеальний варіант, щоб зберігати ключі та додати тепла вашому інтер'єру.
           </p>
@@ -58,23 +59,63 @@
         <p>
           Виготовлена вручну з натуральної деревини, покрита екологічними безпечними оліями. Має 5 металевих гачків для ключів і декоративну нішу для зберігання листів чи невеликих речей.
           <br><br>
-          Розміри: 30 × 20 × 7 см.  
+          Розміри: 44 × 25 × 10 см.  
           Колір: натуральний, коричневий з золотистими елементами.
         </p>
       </div>
 
       <!-- Відгуки -->
-      <div class="product-reviews">
-        <h2>Відгуки</h2>
-        <div class="review">
-          <strong>Олена</strong>
-          <p>Ключниця дуже красива, виглядає ще краще ніж на фото! Дякую за швидку доставку.</p>
-        </div>
-        <div class="review">
-          <strong>Андрій</strong>
-          <p>Якість супер, дерево приємне на дотик, збірка міцна.</p>
-        </div>
+      <section class="product-reviews">
+  <h2>Відгуки</h2>
+
+  <!-- Середній рейтинг -->
+  <div id="reviews-summary" class="reviews-summary">
+    <span id="avg-rating">—</span>
+    <span id="reviews-count">(0)</span>
+  </div>
+
+  <!-- Форма залишення відгуку -->
+  <form id="review-form" class="review-form">
+    <label>
+      Ваше ім'я
+      <input type="text" id="review-name" required placeholder="Ім'я">
+    </label>
+
+    <label class="rating-label">
+      Ваш рейтинг
+      <div id="star-widget" class="star-widget" aria-label="Оберіть рейтинг">
+        <input type="radio" name="rating" id="rate-5" value="5"><label for="rate-5" title="5 зірок">★</label>
+        <input type="radio" name="rating" id="rate-4" value="4"><label for="rate-4" title="4 зірки">★</label>
+        <input type="radio" name="rating" id="rate-3" value="3"><label for="rate-3" title="3 зірки">★</label>
+        <input type="radio" name="rating" id="rate-2" value="2"><label for="rate-2" title="2 зірки">★</label>
+        <input type="radio" name="rating" id="rate-1" value="1"><label for="rate-1" title="1 зірка">★</label>
       </div>
+    </label>
+
+    <label>
+      Коментар
+      <textarea id="review-text" rows="4" placeholder="Напишіть ваш відгук..." required></textarea>
+    </label>
+
+    <div class="review-form-actions">
+      <button type="submit" class="btn-submit">Залишити відгук</button>
+      <button type="button" id="admin-login" class="btn-admin">Вхід як адмін</button>
+    </div>
+  </form>
+
+  <!-- Список відгуків -->
+  <div id="reviews-list" class="reviews-list">
+    <!-- Тут рендеряться відгуки -->
+  </div>
+
+  <!-- Адмін-панель (показується тільки в адмін-режимі) -->
+  <div id="admin-panel" class="admin-panel" style="display:none">
+    <h3>Панель модерації</h3>
+    <div id="admin-list"></div>
+    <button id="admin-logout" class="btn-admin-logout">Вийти з режиму адміна</button>
+  </div>
+</section>
+
     </section>
   </main>
 
@@ -103,5 +144,6 @@
   </footer>
 
   <script src="p1.js"></script>
+  <script src="reviews.js"></script>
 </body>
 </html>

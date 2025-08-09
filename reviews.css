@@ -1,0 +1,151 @@
+/* reviews.css */
+.reviews-summary {
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: #333;
+}
+
+.reviews-summary #avg-rating {
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+/* Форма */
+.review-form {
+  background: #fff;
+  padding: 14px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+  margin-bottom: 18px;
+  display: grid;
+  gap: 8px;
+}
+
+.review-form label { display: block; font-size: 14px; color: #333; }
+.review-form input[type="text"], .review-form textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.review-form .rating-label { margin-top: 6px; }
+
+/* Зірковий віджет */
+.star-widget {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  gap: 6px;
+  font-size: 22px;
+}
+
+.star-widget input { display: none; }
+
+.star-widget label {
+  cursor: pointer;
+  color: #ccc;
+  transition: color 0.12s;
+}
+
+.star-widget input:checked ~ label,
+.star-widget label:hover,
+.star-widget label:hover ~ label {
+  color: #f5a623;
+}
+
+/* Кнопки форми */
+.review-form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.btn-submit {
+  background: #2d7dff;
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-admin {
+  background: #666;
+  color: #fff;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Список відгуків */
+.reviews-list { margin-top: 10px; display: grid; gap: 12px; }
+
+.review-item {
+  background: #f9f9f9;
+  padding: 12px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.review-item .meta { font-size: 13px; color: #666; margin-bottom: 6px; }
+.review-item .text { font-size: 15px; color: #333; }
+
+/* Admin panel */
+.admin-panel {
+  margin-top: 18px;
+  background: #fff6e6;
+  border: 1px solid #ffdca8;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.admin-item { display:flex; justify-content:space-between; gap:10px; align-items: flex-start; padding:8px; border-bottom:1px dashed #eee;}
+.admin-item:last-child { border-bottom: none; }
+
+.admin-controls button {
+  margin-left: 6px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-approve { background: #2d7dff; color: #fff; }
+.btn-delete { background: #e63946; color: #fff; }
+.btn-logout { background: #999; color: #fff; padding: 8px 12px; border-radius: 6px; margin-top: 8px; }
+
+/* мобільна адаптація */
+@media (max-width:600px) {
+  .star-widget { font-size: 18px; }
+  .review-form { padding: 10px; }
+}
+
+.review-actions {
+  margin-top: 8px;
+}
+
+.review-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.review-actions button:hover {
+  text-decoration: underline;
+}
+
+.replies {
+  margin-top: 10px;
+  padding-left: 15px;
+  border-left: 2px solid #ddd;
+}
+
+.reply {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #444;
+}

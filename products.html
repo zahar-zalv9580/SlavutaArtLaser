@@ -19,51 +19,58 @@
 </header>
 
 <main class="catalog">
+
+   <section class="catalog-controls">
+    <input type="text" id="searchInput" placeholder="Пошук товарів..." autocomplete="off">
+    <div id="suggestions" class="suggestions-box"></div>
+
+    <select id="categoryFilter">
+      <option value="">Всі категорії</option>
+      <option value="ключниці">Ключниці</option>
+      <option value="брелки">Брелки</option>
+      <option value="інше">Інше</option>
+    </select>
+
+    <input type="number" id="minPrice" placeholder="Від (грн)">
+    <input type="number" id="maxPrice" placeholder="До (грн)">
+  </section>
+
   <div class="container catalog-grid">
 
     <div class="product-card">
       <a href="product1.html">
         <img src="product1-1.jpg" alt="Ключниця Family">
         <h3>Ключниця "Family"</h3>
-        <p class="price">450 грн</p>
+        <p class="price">420 грн</p>
       </a>
-      <button class="add-to-cart" data-id="1" data-name="Ключниця Family" data-price="450">Купити</button>
+      <button class="add-to-cart" data-id="1" data-name="Ключниця Family" data-price="420">Купити</button>
     </div>
 
     <div class="product-card">
       <a href="product2.html">
-        <img src="product2-1.jpg" alt="Ключниця Heart">
-        <h3>Ключниця "Heart"</h3>
+        <img src="product2-1.jpg" alt="Ключниця Haus">
+        <h3>Ключниця "Haus"</h3>
         <p class="price">420 грн</p>
       </a>
-      <button class="add-to-cart" data-id="2" data-name="Ключниця Heart" data-price="420">Купити</button>
+      <button class="add-to-cart" data-id="2" data-name="Ключниця Haus" data-price="420">Купити</button>
     </div>
 
     <div class="product-card">
       <a href="product3.html">
-        <img src="product3-1.jpg" alt="Підставка під чашку">
-        <h3>Підставка "Leaf"</h3>
+        <img src="product3-1.jpg" alt="Брелок">
+        <h3>Брелок "Україна"</h3>
         <p class="price">120 грн</p>
       </a>
-      <button class="add-to-cart" data-id="3" data-name="Підставка Leaf" data-price="120">Купити</button>
+      <button class="add-to-cart" data-id="3" data-name="Брелок Україна" data-price="120">Купити</button>
     </div>
 
     <div class="product-card">
       <a href="product4.html">
-        <img src="product4-1.jpg" alt="Дерев'яна скринька">
-        <h3>Скринька "Vintage"</h3>
-        <p class="price">380 грн</p>
+        <img src="product4-1.jpg" alt="На Мрію">
+        <h3>Скринька "На мрію"</h3>
+        <p class="price">500 грн</p>
       </a>
-      <button class="add-to-cart" data-id="4" data-name="Скринька Vintage" data-price="380">Купити</button>
-    </div>
-
-    <div class="product-card">
-      <a href="product5.html">
-        <img src="product5-1.jpg" alt="Тримач для телефону">
-        <h3>Тримач для телефону "Standy"</h3>
-        <p class="price">250 грн</p>
-      </a>
-      <button class="add-to-cart" data-id="5" data-name="Тримач Standy" data-price="250">Купити</button>
+      <button class="add-to-cart" data-id="4" data-name="На мрію" data-price="500">Купити</button>
     </div>
 
   </div>
