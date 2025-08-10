@@ -1,3 +1,7 @@
+body{
+    background-color: #fff3e6;
+}
+
 main h1, main p, main h2, main a{
   font-family:'Segoe UI';
   text-decoration: none;

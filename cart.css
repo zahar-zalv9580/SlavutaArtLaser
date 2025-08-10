@@ -1,3 +1,7 @@
+body{
+  background-color: #d2b48c;
+}
+
 main h1, main p{
   font-family:'Segoe UI';
 }
@@ -9,14 +13,9 @@ main h1, main p{
 
 .header {
   background: #3a2f28;
-  padding: 15px 0;
+  
 }
 
-.header-flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
 .logo {
   font-family: 'Pacifico', cursive;
@@ -52,7 +51,7 @@ main h1, main p{
   display: flex;
   align-items: center;
   gap: 15px;
-  background: #fff;
+  background: #e8d9c7;
   border-radius: 8px;
   padding: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
@@ -119,7 +118,6 @@ main h1, main p{
 .footer-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
   max-width: 1100px;
   margin: 0 auto;
 }

@@ -1,4 +1,4 @@
-/* reviews.css */
+
 .reviews-summary {
   margin-bottom: 12px;
   font-weight: 600;
@@ -12,7 +12,7 @@
 
 /* Форма */
 .review-form {
-  background: #fff;
+   background-color: #fff3e6;
   padding: 14px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.03);

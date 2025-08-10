@@ -12,7 +12,7 @@ main h1, main p, main h2{
 body {
   font-family: Arial, sans-serif;
   color: #222;
-  background: #fff;
+  background-color: #fff3e6;
   line-height: 1.5;
 }
 
@@ -147,7 +147,7 @@ nav {
 
 .indicators div.active { background: #2d7dff; }
 
-/* ======= БЛОКИ "ЧОМУ МИ" ТА ВІДГУКИ (залишаємо як у тебе, тільки дрібні правки) */
+
 .advantages, .reviews {
   text-align: center;
   padding: 60px 20px;
