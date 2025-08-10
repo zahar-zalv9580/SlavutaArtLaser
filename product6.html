@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Jura:wght@300..700&display=swap');
+</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slavuta ArtLaser - Скринька "Спеції"</title>
+  <link rel="stylesheet" href="p6.css">
+  <link rel="stylesheet" href="reviews.css">
+</head>
+<body>
+  <!-- Хедер -->
+  <header class="header">
+    <div class="container header-flex">
+      <a href="index.html" class="logo">Slavuta ArtLaser</a>
+      <nav class="nav">
+        <a href="index.html">Головна</a>
+        <a href="products.html">Вироби</a>
+        <a href="shopcart.html">Кошик</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Контент товару -->
+  <main>
+    <section class="product-page" data-product-id="6">
+      <div class="product-container">
+        <!-- Слайдер фото -->
+        <div class="product-slider">
+          <div class="slides">
+            <!-- JS буде наповнювати, але лишимо стартові зображення як запас -->
+            <img src="product6-1a.jpg" class="active" alt="Скринька Спеції">
+            <img src="product6-2a.jpg" alt="Скринька Спеції">
+          </div>
+          <div class="slider-controls">
+            <button class="prev">‹</button>
+            <button class="next">›</button>
+          </div>
+          <div class="thumbnails">
+            <img src="product6-1a.jpg" class="active" alt="thumb1">
+            <img src="product6-2a.jpg" alt="thumb2">
+          </div>
+        </div>
+
+        <!-- Опис товару -->
+        <div class="product-info">
+          <h1 id="product-title">Скринька "Спеції"</h1>
+          <p class="price" id="product-price">120 грн</p>
+
+          <div class="variants" id="variants">
+            <!-- JS згенерує тут swatches -->
+          </div>
+
+          <p class="short-desc">
+            Стильна та функціональна скринька з відділеннями для спецій. Дерев’яний корпус з гравіюванням додасть кухні особливого затишку.
+          </p>
+
+          <button class="btn-buy" id="buy-btn">Купити</button>
+        </div>
+      </div>
+
+      <!-- Деталі товару -->
+      <div class="product-details">
+        <h2>Деталі товару</h2>
+        <p>
+          Стильна та функціональна скринька з відділеннями для спецій. Дерев’яний корпус з гравіюванням додасть кухні особливого затишку.
+          <br><br>
+          Розміри: 32 × 14 × 7 см.  
+          Колір: вибірний.
+        </p>
+      </div>
+
+      <!-- Відгуки -->
+      <section class="product-reviews">
+        <h2>Відгуки</h2>
+
+        <!-- Середній рейтинг -->
+        <div id="reviews-summary" class="reviews-summary">
+          <span id="avg-rating">—</span>
+          <span id="reviews-count">(0)</span>
+        </div>
+
+        <!-- Форма залишення відгуку -->
+        <form id="review-form" class="review-form">
+          <label>
+            Ваше ім'я
+            <input type="text" id="review-name" required placeholder="Ім'я">
+          </label>
+
+          <label class="rating-label">
+            Ваш рейтинг
+            <div id="star-widget" class="star-widget" aria-label="Оберіть рейтинг">
+              <input type="radio" name="rating" id="rate-5" value="5"><label for="rate-5" title="5 зірок">★</label>
+              <input type="radio" name="rating" id="rate-4" value="4"><label for="rate-4" title="4 зірки">★</label>
+              <input type="radio" name="rating" id="rate-3" value="3"><label for="rate-3" title="3 зірки">★</label>
+              <input type="radio" name="rating" id="rate-2" value="2"><label for="rate-2" title="2 зірки">★</label>
+              <input type="radio" name="rating" id="rate-1" value="1"><label for="rate-1" title="1 зірка">★</label>
+            </div>
+          </label>
+
+          <label>
+            Коментар
+            <textarea id="review-text" rows="4" placeholder="Напишіть ваш відгук..." required></textarea>
+          </label>
+
+          <div class="review-form-actions">
+            <button type="submit" class="btn-submit">Залишити відгук</button>
+            <button type="button" id="admin-login" class="btn-admin">Вхід як адмін</button>
+          </div>
+        </form>
+
+        <!-- Список відгуків -->
+        <div id="reviews-list" class="reviews-list">
+          <!-- Тут рендеряться відгуки -->
+        </div>
+
+        <!-- Адмін-панель (показується тільки в адмін-режимі) -->
+        <div id="admin-panel" class="admin-panel" style="display:none">
+          <h3>Панель модерації</h3>
+          <div id="admin-list"></div>
+          <button id="admin-logout" class="btn-admin-logout">Вийти з режиму адміна</button>
+        </div>
+      </section>
+
+    </section>
+  </main>
+
+  <!-- Футер -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>Про нас</h3>
+        <p>Ми створюємо унікальні дрібні вироби з натуральної деревини, які додають затишку та тепла будь-якому дому.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Контакти</h3>
+        <p>📞 +38 (097) 123-45-67</p>
+        <p>📧 info@shop.com</p>
+        <div class="social">
+          <a href="#">🔵 Facebook</a>
+          <a href="#">🟣 Instagram</a>
+          <a href="#">🔗 Telegram</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 Slavuta ArtLaser. Усі права захищені.
+    </div>
+  </footer>
+
+  <script src="p6.js"></script>
+  <script src="reviews.js"></script>
+</body>
+</html>

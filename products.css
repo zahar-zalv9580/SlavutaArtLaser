@@ -1,3 +1,7 @@
+main h1, main p, main h2, main a{
+  font-family:'Segoe UI';
+  text-decoration: none;
+}
 /* ====== Контейнер і контролери ====== */
 .container {
   max-width: 1100px;
@@ -149,11 +153,7 @@
   background: #155cd8;
 }
 
-/* ====== Header/Footer (узгоджені) ====== */
-.header {
-  background: #3a2f28;
-  padding: 15px 0;
-}
+
 
 .header-flex {
   display: flex;
@@ -169,17 +169,14 @@
 }
 
 .nav a {
-  color: #f1e3d3;
   margin-left: 16px;
   text-decoration: none;
   font-weight: 500;
 }
 
-.nav a.active { text-decoration: underline; }
+.nav a.active { text-decoration: none; }
 
 .footer {
-  background: #222;
-  color: #ccc;
   padding: 40px 20px;
   margin-top: 40px;
 }
@@ -203,16 +200,60 @@
   color: #fff;
 }
 
-.footer a {
-  color: #ccc;
-  text-decoration: none;
-}
 
 .footer a:hover {
   color: #2d7dff;
 }
 
-.socials a {
-  display: inline-block;
-  margin-right: 10px;
+
+header, .footer {
+    background-image: url('wood.png');
+    background-size: cover;
+    background-repeat: repeat;
+    padding: 15px 20px;
+    color: #4b2e1e;
+    text-align: center;
+    font-family: 'Georgia', serif;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.4);
+}
+
+/* Вигравіюваний текст */
+header h1, footer h2, footer p, nav a, footer a, header a {
+    color: #3a1f0f;
+    text-shadow:
+        1px 1px 0 #d98e2b,
+       -1px -1px 0 #e8982f,
+        0 1px 0 #e8972c,
+        1px 0 0 #f49923;
+      font-family: 'Comfortaa' ;
+      text-decoration: none;
+}
+
+/* Кнопки під стиль */
+button, .btn {
+    background-color: rgba(255,255,255,0.1);
+    color: #3a1f0f;
+    border: 2px solid #d2b48c;
+    padding: 8px 15px;
+    font-size: 16px;
+    font-family: 'Georgia', serif;
+    cursor: pointer;
+    box-shadow: inset 1px 1px 3px rgba(255,255,255,0.4),
+                inset -1px -1px 3px rgba(0,0,0,0.2);
+    transition: background 0.3s;
+}
+
+button:hover, .btn:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+/* Навігація */
+nav a {
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #5e3b26;
 }

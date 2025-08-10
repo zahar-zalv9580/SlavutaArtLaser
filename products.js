@@ -42,7 +42,7 @@ const productsMeta = [
   { name: "Брелок Україна", category: "брелки", price: 120, img: "product3-1.jpg", id: "3" },
   { name: "Скринька На мрію", category: "інше", price: 500, img: "product4-1.jpg", id: "4" },
   { name: "Підставка на телефон", category: "інше", price: 100, img: "product5-1.jpg", id: "5" },
-  { name: "Скринька 'Спеції'", category: "інше", price: 150, img: "product6-1.jpg", id: "6" }
+  { name: "Скринька 'Спеції'", category: "інше", price: 150, img: "product6-1a.jpg", id: "6" }
 ];
 
 /* --------------------

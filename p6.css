@@ -198,3 +198,45 @@ nav a {
 nav a:hover {
     color: #5e3b26;
 }
+
+.variants {
+  display:flex;
+  gap:10px;
+  align-items:center;
+  margin:12px 0;
+  flex-wrap:wrap;
+}
+.variant-swatch {
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  border:2px solid transparent;
+  cursor:pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  font-size: 12px;
+  color: #222;
+  padding: 0;
+  transition: transform .12s ease, border-color .12s ease, box-shadow .12s ease;
+}
+
+/* якщо замість кольору треба текст (fallback) */
+.variant-swatch .sw-label {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* активний */
+.variant-swatch.active {
+  border-color:#2d7dff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(45,125,255,0.12);
+}
+
+/* focus для клавіатури */
+.variant-swatch:focus {
+  outline: 3px solid rgba(45,125,255,0.16);
+  outline-offset: 3px;
+}
